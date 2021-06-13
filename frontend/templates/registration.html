@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+    <title>Registration</title>
+</head>
+<body>
+<div class="main">
+    <div align="center">
+        <form method="post" action="{% url 'registration' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="SIGN UP">
+        </form>
+        {% if invalid %}
+            <p>This username is already taken! Please choose another!</p>
+        {% endif %}
+    </div>
+    <br>
+    <div align="center"><a href="/login">sign in</a></div>
+</div>
+</body>
+</html>

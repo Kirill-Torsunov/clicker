@@ -1,0 +1,143 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.bitcoin {
+    width: 30em;
+    height: 30em;
+    transition: transform ease-out 1s;
+}
+
+.bitcoin:hover, .boost-holder:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.bitcoin:active {
+    opacity: 1;
+}
+
+.boost-holder[disabled] {
+    opacity: 0.4;
+}
+
+.boosts-place {
+    flex: 1 0;
+}
+
+.boost-place {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    background-color: #ffa300;
+    border-radius: 10px;
+}
+
+.clicker {
+    flex: 1 0;
+}
+
+.boost-holder {
+    display: flex;
+    background: #efdd17;
+    border-radius: 20px;
+    margin: 5px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.boost-holder.auto-click {
+    background-color: #f32d6b;
+}
+
+.boost-holder p,
+.bitcoin.boost {
+    padding: 0;
+    margin: 0 0 5px 0;
+}
+
+.boost-holder p {
+    padding: 0 10px 0 10px;
+}
+
+.bitcoin.boost {
+    width: 60px;
+    height: 60px;
+    border-radius: inherit;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+}
+
+.click-power, .auto-click-power {
+    margin: 0;
+    padding: 10px 10px 5px 10px;
+    font-size: 20px;
+}
+
+.clicker p, .logout {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.coins {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    border: 5px solid #ffe03f;
+    background-color: #ffa300;
+    align-self: center;
+    padding: 10px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.clicker .bitcoin {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.click-power, .auto-click-power {
+    display: flex;
+    background: linear-gradient(-120deg, white, white 50%, #ffe03d 70%);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    justify-content: space-between;
+    width: 250px;
+    height: 40px;
+    font-weight: bold;
+}
+
+.click-power p, .auto-click-power p {
+    margin: 0;
+    padding: 0;
+    align-self: center;
+}
+
+.coin-image {
+    width: 30px;
+    height: 30px;
+}
+
+.click-power .coin-image,
+.auto-click-power .coin-image {
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.coins {
+    display: flex;
+}
+
+.coins p {
+    padding: 0;
+    margin: 0 0 0 5px;
+}

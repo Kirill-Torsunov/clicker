@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="utf-8">
+    <title>Bitcoins clicker</title>
+</head>
+<body onload="getUser({{ user.id }})">
+
+<main>
+    <div class="clicker">
+        <div class="logout"><a href="/logout">LOGOUT</a></div>
+        <p class="text" id="user">%user%</p>
+        <input type="image" class="choice" src="{% static 'images/bitcoin1.png' %}" width="60" height="60" alt="choice"
+               onclick="changeBitcoin('{% static 'images/bitcoin1.png' %}')">
+        <input type="image" class="bitcoin" src="{% static 'images/bitcoin.png' %}" onclick="bitcoinClick()"
+               alt="clicker"/>
+    </div>
+
+    <div class="boosts-place">
+        <div class="status">
+            <div class="coins">
+                <img class="coin-image" src="{% static 'images/coin.png' %}" alt="coin">
+                <p id="data">%coins%</p>
+            </div>
+            <div class="status-power">
+                <div class="click-power">
+                    <p>Click<br> power</p>
+                    <img class="coin-image" src="{% static 'images/power.png' %}" alt="click power">
+                    <p id="click_power">%clickPower%</p>
+                </div>
+                <div class="auto-click-power">
+                    <p>Auto-Click<br> power</p>
+                    <img class="coin-image" src="{% static 'images/autoclick.png' %}" alt="auto click">
+                    <p id="auto_click_power"> {{ mainCycle.autoClickPower }} </p>
+                </div>
+            </div>
+        </div>
+        <div class="boost-place" id="boost-place"></div>
+    </div>
+</main>
+
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
